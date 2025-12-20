@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Functions</title>
+  </head>
+
+  <body>
+    <script>
+      // function function1() {
+      //   console.log('hello');
+      //   console.log(2+2);
+      // }
+      // function1();
+
+      function calculateTax (para1, para2 = 1.2) {
+        console.log(para1 * para2);
+      }
+      calculateTax(2000, 0.1);
+      calculateTax(3000);  // para2 = 1.2 is considered default
+    </script>
+  </body>
+</html>
