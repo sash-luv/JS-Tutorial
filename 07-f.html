@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+    
+      
+      // 7f
+      function convertToTemperature(degrees, unit) {
+        if (unit === 'F') {
+          const temperature = convertToCelsius(degrees);
+          return `${temperature}C`;  // return as a string
+        } else if (unit === 'C'){
+          temperature = convertToFahrenhite(degrees);
+          return `${temperature}F`
+        }
+      }
+      console.log(convertToTemperature(25,'C'));
+      console.log(convertToTemperature(86,'F'));
+
+
+
+    </script>
+  </body>
+</html>
