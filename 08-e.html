@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      // 8e-create a function, if the objects have same values returns true
+      const product1 = {
+        name: 'one',
+        price: 100
+      };
+
+      const product2 ={
+        name: 'one',
+        price: 100
+      };
+
+      const product3 = {
+        name: 'two',
+        price: 100
+      };
+
+
+      function isSameProduct(product1,product2) {
+        if (product1.price === product2.price && product1.name === product2.name)
+          return true;
+        else
+          return false;
+      }
+
+      // less code
+      function isSameProduct(product1,product3) {
+        return (product1.price === product3.price && product1.name === product3.name)
+      }
+
+      console.log(isSameProduct(product1,product2));
+      console.log(isSameProduct(product1,product3));
+
+    </script>
+  </body>
+</html>
