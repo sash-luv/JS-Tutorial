@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class ="subscribe-button" onclick="
+      subscribe();
+    " >Subscribe</button>
+    
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input placeholder="Cost of order"
+    class="js-cost-input"
+    onkeydown="handleCostKeydown(event)">
+    <!-- input is a void element, does not require a closing tag -->
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+
+
+    <script>
+      String(25);  //convert num into a string
+      console.log('25' - 5);   // Type coercion - result 20
+      console.log('25' + 5);  // result - 255
+
+      window.console
+      window.alert
+      // window is a built in object that represents window, no need to add it the browser adds it automaticaly
+
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+        calculateTotal();
+      }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+
+        //save the value from the input
+        // Number - .value saves as a string, so convert back to a number
+        let cost = Number(inputElement.value);
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector('.js-total-cost')
+          .innerHTML= `$${cost}`;
+      }
+
+      function subscribe () {
+        const buttonElement = document.querySelector('.subscribe-button');
+        if (buttonElement.innerHTML === 'Subscribe') {
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      /* if there is extra spaces inside the button, use innerText this, then it will only focus on the text only */
+      }
+    </script>
+
+  </body>
+</html>
