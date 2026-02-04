@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      // ARRAYS
+      const myArray = [10, 20, 30];
+      console.log(myArray);
+      console.log(myArray[1]);
+
+      myArray[0]=99;  //change a value
+      console.log(myArray[0]);
+
+      const secondArray = [1, 'hello', true, {name: 'socks'}, [1,2]];
+      console.log(typeof secondArray);
+      console.log(Array.isArray([1,2]));  //to check if a value is array
+
+      console.log(myArray.length); // check the length
+
+      myArray.push(100);   // add a value at the end
+      console.log(myArray);
+
+      myArray.splice(0, 1);  // remove a value: 0 - first index, 1 - starting from there remove one value, eg: (0,2) starting from first index remove 2 values
+      console.log(myArray);
+
+      // LOOPS
+      let i = 1;
+      while(i < 5) {
+        console.log(i);
+        i++;
+      }; // loop creates a scope
+
+      for (let i = 0; i <= 3; i++){
+        console.log(i);
+      };
+
+//  display the values line by line
+      const todolist = [
+        'dinner',
+        'clothes',
+        'phone'
+      ];
+
+      for(let index = 0; index < todolist.length; index++) {
+        console.log(todolist[index]);
+      }
+
+//  Calculate total of numbers
+      let numbers = [1, 1, 3];
+      let total = 0;
+
+      for(i = 0; i < numbers.length; i++){
+        total += numbers[i];
+      }
+      console.log(total);
+
+// Copy of the array with each number doubled
+      const doubledArray = [];
+      for(i = 0; i < numbers.length; i++){
+        doubledArray.push(numbers[i]*2);
+      }
+      console.log(doubledArray);
+    </script>
+  </body>
+</html>

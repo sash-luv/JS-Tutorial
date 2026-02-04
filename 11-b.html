@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p class="last-value"></p>
+    <script>
+      // const numbers = [10, 20, 30, 40];
+
+      // function getLastValue() {
+      //   for (let i = 0; i < numbers.length; i++) {
+      //     value = numbers[i];
+      //   }
+      // }
+      // getLastValue();
+      // document.querySelector('.last-value').innerHTML = value;
+
+
+      function getLastValue2(array) {
+        const lastIndex = array.length - 1;
+        return array[lastIndex];
+      }
+      console.log(getLastValue2([1, 20, 22, 24, 5]));
+      console.log(getLastValue2(['hi', 'hello', 'hey']));
+    </script>
+  </body>
+</html>
